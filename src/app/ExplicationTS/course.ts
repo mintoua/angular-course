@@ -1,3 +1,4 @@
+/*
 //1-Types de données et déclarations de variables
 let nom: string = "VotreNom";
 let age: number = 30;
@@ -41,3 +42,6 @@ function bonjour(): void{
   console.log("Bonjour Bienvenue")
 }
 bonjour()
+*/
+
+//séance 1
