@@ -1,44 +1,111 @@
+/*
 //1-Types de données et déclarations de variables
-var nom = "VotreNom";
-var age = 30;
-var PI = 3.14; //
-var PASSWORD = "MTAPO"; //
+let nom: string = "VotreNom";
+let age: number = 30;
+const PI: number = 3.14; //
+const PASSWORD: string = "MTAPO"; //
 nom = "Mintoua";
-var etat = true; //false
-if (etat) {
-    console.log("true");
+let etat: boolean = true; //false
+if(etat){
+  console.log("true")
 }
+
 //2- Type tableaux
-var tabNumber = [1, 2, 5, 8];
-var tabNoms = ["Corine", "Toure", "Mintoua"];
-var list = [1, 5, 89, 78];
+let tabNumber: number[] = [1,2,5,8];
+let tabNoms: string[] = ["Corine", "Toure", "Mintoua"];
+let list: Array<number> = [1,5,89,78];
 //Tuple
-var tuple = ["Toure", 27];
+let tuple: [string, number] = ["Toure", 27];
+
 //3-Enum
-var Couleur;
-(function (Couleur) {
-    Couleur[Couleur["Rouge"] = 0] = "Rouge";
-    Couleur[Couleur["Verte"] = 1] = "Verte";
-    Couleur[Couleur["Blue"] = 2] = "Blue";
-    Couleur[Couleur["Orange"] = 3] = "Orange";
-    Couleur[Couleur["Jaune"] = 4] = "Jaune";
-})(Couleur || (Couleur = {}));
-var chaussette = Couleur.Verte;
-var Role;
-(function (Role) {
-    Role[Role["User"] = 0] = "User";
-    Role[Role["Admin"] = 1] = "Admin";
-    Role[Role["Enseignant"] = 2] = "Enseignant";
-    Role[Role["Etudiant"] = 3] = "Etudiant";
-})(Role || (Role = {}));
-var roleType = Role.Enseignant;
-//4-Any
-var pasSure;
-//5-Void avec les fonctions/méthodes
-function bonjour() {
-    console.log("Bonjour Bienvenue");
+enum Couleur{
+  Rouge,
+  Verte,
+  Blue,
+  Orange,
+  Jaune
 }
-bonjour();
+let chaussette: Couleur = Couleur.Verte;
 
+enum Role{
+  User, Admin, Enseignant,Etudiant
+}
 
-///
+let roleType: Role = Role.Enseignant
+
+//4-Any
+let pasSure: any;
+
+//5-Void avec les fonctions/méthodes
+
+function bonjour(): void{
+  console.log("Bonjour Bienvenue")
+}
+bonjour()
+*/
+//séance 1
+//Strcuture conditionnelles en Typescript
+var age = 18;
+if (age >= 18) {
+    console.log("majeur");
+}
+else if (age < 18) {
+    console.log("mineur");
+}
+var message = age >= 18 ? "majeur" : "mineur";
+console.log(message);
+//boucle 'for'
+/*
+for(let i=0; i < 5; i++){
+  console.log(i)
+}
+*/
+/*
+let i = 0;
+while (i<5){
+  console.log(i)
+  i++;
+}
+*/
+/*let i = 0;
+do{
+  console.log(i)
+  i++;
+}
+while (i<5)*/
+/*let choix=0;
+switch (choix){
+  case 0:
+    console.log("0")
+    break;
+  case 1:
+    console.log('1')
+    break;
+}*/
+/*
+let noms: string[] = ['pomme', 'orange', 'banane'];
+
+noms.forEach((nom: string) =>{
+  console.log(`${nom}`)
+})
+*/
+//interface
+/*interface Produit{
+  nom: string;
+  prix: number;
+}
+
+let product: Produit={nom: "Sac", prix:15};
+console.log(product)*/
+var Produit = /** @class */ (function () {
+    function Produit(nomP, prixP) {
+        this.nom = nomP;
+        this.prix = prixP;
+    }
+    Produit.prototype.afficheerProduit = function () {
+        console.log("prix: " + this.prix + "nom: " + this.nom);
+    };
+    return Produit;
+}());
+var product = new Produit("sac", 15);
+product.afficheerProduit();

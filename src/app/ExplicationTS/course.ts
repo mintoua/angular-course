@@ -45,3 +45,110 @@ bonjour()
 */
 
 //séance 1
+//Strcuture conditionnelles en Typescript
+
+let age: number = 18;
+
+if ( age>= 18){
+  console.log("majeur");
+}
+else
+  if (age<18){
+    console.log("mineur");
+  }
+
+  let message : string = age >= 18 ? "majeur" : "mineur";
+
+  console.log(message);
+
+
+  //boucle 'for'
+/*
+for(let i=0; i < 5; i++){
+  console.log(i)
+}
+*/
+
+/*
+let i = 0;
+while (i<5){
+  console.log(i)
+  i++;
+}
+*/
+/*let i = 0;
+do{
+  console.log(i)
+  i++;
+}
+while (i<5)*/
+
+/*let choix=0;
+switch (choix){
+  case 0:
+    console.log("0")
+    break;
+  case 1:
+    console.log('1')
+    break;
+}*/
+/*
+let noms: string[] = ['pomme', 'orange', 'banane'];
+
+noms.forEach((nom: string) =>{
+  console.log(`${nom}`)
+})
+*/
+
+//interface
+/*interface Produit{
+  nom: string;
+  prix: number;
+}
+
+let product: Produit={nom: "Sac", prix:15};
+console.log(product)*/
+
+function logClass(index: Function) {
+  console.log(" la classe a été decorée: " + index.name)
+}
+
+//kotlin, C#, goLand
+@logClass
+class Produit{
+  nom: string;
+  prix: number;
+
+  constructor(nomP: string, prixP: number) {
+    this.nom = nomP;
+    this.prix = prixP;
+  }
+
+  afficheerProduit(){
+    console.log("prix: " + this.prix + "nom: " + this.nom)
+  }
+
+}
+
+let product = new Produit("sac",15);
+product.afficheerProduit();
+
+
+class User{
+
+  nom: string;
+
+  constructor(nom: string) {
+    this.nom = nom;
+  }
+
+}
+
+class Etudiant extends User{
+  matricule: number;
+
+  constructor(matricule: number, nom: string) {
+    super(nom);
+    this.matricule = matricule;
+  }
+}
