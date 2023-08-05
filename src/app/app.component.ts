@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  titre = 'logonedigital-angular-course';
+  title = "Liste des cours";
+  cours = {
+    titre: 'Introduction à Angular',
+    description: 'Découvrez le framework Angular pour créer des applications Web modernes.',
+    difficulte: 'Débutant',
+    credit: 3,
+    formateur: 'Mta'
+  };
 }
