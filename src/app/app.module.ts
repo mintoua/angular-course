@@ -2,21 +2,23 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { CoursDetailsComponent } from './cours-details/cours-details.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { PostComponent } from './post/post.component';
+import { PostListComponent } from './post-list/post-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CoursDetailsComponent,
     HeaderComponent,
     FooterComponent,
-    NavbarComponent
+    NavbarComponent,
+    PostComponent,
+    PostListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
