@@ -6,8 +6,8 @@ import {PostComponent} from "./post/post.component";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements AfterViewInit{
-  titre = 'logonedigital-angular-course';
+export class AppComponent {
+  brand = "Logone blog";
 
   parentMessage:string ="Parent Message";
 
@@ -22,4 +22,6 @@ export class AppComponent implements AfterViewInit{
     console.log(this.childComp)
     this.message = this.childComp.childMessage;
   }
+
+
 }
