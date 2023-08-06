@@ -23,6 +23,6 @@ export class PostComponent implements OnInit{
   }
 
   send(){
-    this.messageEvent.emit("MessageFils");
+    this.messageEvent.emit("Bienvenue");
   }
 }

@@ -15,6 +15,8 @@ export class AppComponent implements AfterViewInit{
 
   message:any;
 
+  eventChild: any;
+
   @ViewChild(PostComponent) postComponent: any;
 
 /*  @ViewChild(PostComponent) childComp: any;*/
@@ -31,7 +33,7 @@ export class AppComponent implements AfterViewInit{
   }
 
   received($event: any){
-    console.log($event);
+    this.eventChild = $event;
   }
 
 }
