@@ -1,10 +1,15 @@
-<app-navbar></app-navbar>
+<app-navbar [brandDeParent] = 'brand' ></app-navbar>
 <div class="container mt-4">
   <h2>Contenu principal</h2>
   <p>{{message}}</p>
   <app-post [fromParent] = 'parentMessage'></app-post>
 </div>
 
+<div class="container">
+
+  {{ infoFilsPostComponent }}
+
+</div>
 <app-footer></app-footer>
 <!--<h1> {{ brand }} </h1>
 <app-navbar [brandDeParent] = 'brand' ></app-navbar>-->

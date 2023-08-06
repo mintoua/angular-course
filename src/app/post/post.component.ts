@@ -8,11 +8,10 @@ import {Component, Input, OnInit} from '@angular/core';
 export class PostComponent implements OnInit{
 
   titre:string = "List of post";
-  messagePost: string = "Message post";
 
-  postParentMessage: string ="Message from post parent";
+  messageDuFils: string = "List des posts";
 
-  childMessage:string =  "From child component";
+  index: number = 45;
 
   @Input() fromParent: string | undefined;
 
