@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-post',
@@ -15,9 +15,14 @@ export class PostComponent implements OnInit{
 
   @Input() fromParent: string | undefined;
 
+  @Output() messageEvent =  new EventEmitter<string>();
   constructor() {
   }
 
   ngOnInit() {
+  }
+
+  send(){
+    this.messageEvent.emit("MessageFils");
   }
 }

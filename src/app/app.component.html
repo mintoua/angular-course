@@ -2,7 +2,7 @@
 <div class="container mt-4">
   <h2>Contenu principal</h2>
   <p>{{message}}</p>
-  <app-post [fromParent] = 'parentMessage'></app-post>
+  <app-post [fromParent] = 'parentMessage' (messageEvent)="received($event)"></app-post>
 </div>
 
 <div class="container">
