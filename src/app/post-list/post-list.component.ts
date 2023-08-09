@@ -11,7 +11,6 @@ export class PostListComponent implements OnInit{
   @Input() fromPostParent:string|undefined;
   constructor() {
   }
-
   ngOnInit() {
   }
 }

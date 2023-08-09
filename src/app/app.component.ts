@@ -29,7 +29,6 @@ export class AppComponent implements AfterViewInit{
     console.log(this.postComponent)
     this.infoFilsPostComponent = this.postComponent.titre; //Message du fils: PostComponent
     console.log(this.infoFilsPostComponent);
-    /*    this.message = this.childComp.messagePost;*/
   }
 
   received($event: any){
