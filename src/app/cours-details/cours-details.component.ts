@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-cours-details',
@@ -6,12 +6,18 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./cours-details.component.css']
 })
 export class CoursDetailsComponent implements OnInit{
-  @Input() cours: any;
+  @Input() coursArray: any;
 
+  @Output() deleteEvent = new EventEmitter<boolean>();
   titre="Cours";
+
   constructor() {
   }
 
   ngOnInit() {
+  }
+
+  sendDelete(cours: any){
+    this.deleteEvent.emit(cours);
   }
 }

@@ -1,10 +1,10 @@
 <app-header></app-header>
 <!--<router-outlet></router-outlet>-->
-<div class="container mt-4">
-  <h2>Les cours</h2>
-   <app-cours-details [cours]="cours"></app-cours-details>
-  <app-cours-details [cours]="cours"></app-cours-details>
-  <app-cours-details [cours]="cours"></app-cours-details>
+
+<div class="container p-5">
+  <button (click)="addNewItem()" type="button" class="btn btn-success">Add</button>
+  <app-cours-details (deleteEvent)="deleteItem($event)" [coursArray]="coursArray" ></app-cours-details>
+
 </div>
 
 <app-footer></app-footer>
