@@ -7,8 +7,9 @@ import { Component } from '@angular/core';
 })
 export class PostComponent {
 
-  stepForm: any
-  onClick(status: any){
-    this.stepForm = status;
+  etapeForm: any //etape 1, etape 2
+  buttonAppuyer(etape: any)
+  {
+    this.etapeForm = etape;
   }
 }
