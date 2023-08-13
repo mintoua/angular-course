@@ -1,1 +1,19 @@
-<p>post works!</p>
+<div>
+  <button (click)="onClick('step 1')"> Step 1</button>
+  <button (click)="onClick('step 2')"> Step 2</button>
+  <button (click)="onClick('step 3')"> Step 3</button>
+<!--  (click)="onClick('step 1')" // event binbing-->
+</div>
+<div>
+  <div *ngIf="stepForm == 'step 1'"> Step 1 Form</div>
+  <div *ngIf="stepForm == 'step 2'"> Step 2 Form</div>
+  <div *ngIf="stepForm == 'step 3'"> Step 3 Form</div>
+</div>
+
+<!--
+<div [ngSwitch]="stepForm">
+  <div *ngSwitchCase="'step 1'"> Step 1 Form</div>
+  <div *ngSwitchCase="'step 2'"> Step 2 Form</div>
+  <div *ngSwitchCase="'step 3'"> Step 3 Form</div>
+</div>
+-->

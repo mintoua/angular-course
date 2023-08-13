@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class PostComponent {
 
+  stepForm: any
+  onClick(status: any){
+    this.stepForm = status;
+  }
 }
