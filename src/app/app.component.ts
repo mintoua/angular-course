@@ -32,17 +32,19 @@ export class AppComponent {
     },
   ]
 
-  addNewItem(){
-    this.coursArray.push(    {
+  addItem(){
+    this.coursArray.push(
+      {
       titre: 'Introduction à VueJS',
       description: 'Découvrez le framework VueJS.',
       difficulte: 'Débutant',
       credit: 3,
       formateur: 'Mta'
-    })
+    }
+    )
   }
 
-  deleteItem($event:any){
+  deleteFromCoursArray($event:any){
     let index = this.coursArray.indexOf($event);
     this.coursArray.splice(index, 1);
   }

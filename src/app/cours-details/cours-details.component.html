@@ -1,5 +1,6 @@
-<div *ngIf="coursArray.length > 0; else noData">
-  <div *ngFor="let cours of coursArray" class="container mt-4">
+
+<div *ngIf="listCours.length > 0; else templateSansDonnee">
+  <div *ngFor="let cours of listCours" class="container mt-4">
     <h2>{{ cours.titre }}</h2>
     <p>{{ cours.description }}</p>
     <ul>
@@ -7,15 +8,13 @@
       <li>Crédits : {{ cours.credit }}</li>
       <li>Formateur : {{ cours.formateur }}</li>
     </ul>
-    <a href="#" class="btn btn-primary">S'inscrire</a>
-    <button (click)="sendDelete(cours)" type="button" class="btn btn-danger">Delete</button>
+    <a href="#" class="btn btn-outline-info">S'inscrire</a>
+    <button (click)="envoyerSupp(cours)" type="button" class="btn btn-outline-danger">Delete</button>
   </div>
 </div>
 
-
-<ng-template #noData>
+<ng-template #templateSansDonnee>
   <div class="container mt-4">
     <p> No data ...</p>
   </div>
 </ng-template>
-

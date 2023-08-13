@@ -6,9 +6,17 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
   styleUrls: ['./cours-details.component.css']
 })
 export class CoursDetailsComponent implements OnInit{
-  @Input() coursArray: any;
+  @Input() listCours: any;
 
-  @Output() deleteEvent = new EventEmitter<boolean>();
+  cours: any = {
+    titre: 'Introduction à VueJS',
+    description: 'Découvrez le framework VueJS.',
+    difficulte: 'Débutant',
+    credit: 3,
+    formateur: 'Mta'
+  };
+
+  @Output() deleteEvent = new EventEmitter<any>();
   titre="Cours";
 
   constructor() {
@@ -17,7 +25,7 @@ export class CoursDetailsComponent implements OnInit{
   ngOnInit() {
   }
 
-  sendDelete(cours: any){
+  envoyerSupp(cours: any){
     this.deleteEvent.emit(cours);
   }
 }
