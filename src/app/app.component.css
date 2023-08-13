@@ -1,3 +1,11 @@
-h1{
-  color: blue;
+.form-area,.preview-area
+{
+  margin-top: 50px;
+  text-align: center;
+}
+/*for class binding on html class*/
+.add-background
+{
+  background-color: yellow;
+  padding: 10px;
 }

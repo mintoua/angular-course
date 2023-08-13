@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  titre = 'logonedigital-angular-course';
+  postTitle: string | undefined;
+  postDetails: string | undefined;
+  imageUrl: string | undefined;
+  postUrl: string | undefined;
+  addBackground: boolean | undefined;
+
 }
