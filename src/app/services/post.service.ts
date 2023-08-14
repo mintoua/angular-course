@@ -10,4 +10,9 @@ export class PostService {
     {id:2, postTitle: "Post 2"}
   ]
   constructor() { }
+
+  getAllPosts(): Array<any>{
+
+    return this.postList;
+  }
 }
