@@ -1,39 +1,29 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {CoursService} from "./services/cours.service";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = "Liste des cours";
 
-  coursArray: Array<any> = [
-    {
-      titre: 'Introduction à Angular',
-      description: 'Découvrez le framework Angular pour créer des applications Web modernes.',
-      difficulte: 'Débutant',
-      credit: 3,
-      formateur: 'Mta'
-    },
-    {
-      titre: 'Introduction à Spring Boot',
-      description: 'Découvrez le framework',
-      difficulte: 'Débutant',
-      credit: 3,
-      formateur: 'Mta'
-    },
-    {
-      titre: 'Introduction à React JS',
-      description: 'Découvrez le framework React.',
-      difficulte: 'Débutant',
-      credit: 3,
-      formateur: 'Mta'
-    },
-  ]
+  coursArray: Array<any> | undefined;
+
+
+  //injection de la dépendance
+  constructor(private coursService: CoursService)
+  {
+
+  }
+
+  ngOnInit() {
+    this.coursArray = this.coursService.getAllCours()
+  }
 
   addItem(){
-    this.coursArray.push(
+/*    this.coursArray.push(
       {
       titre: 'Introduction à VueJS',
       description: 'Découvrez le framework VueJS.',
@@ -41,11 +31,11 @@ export class AppComponent {
       credit: 3,
       formateur: 'Mta'
     }
-    )
+    )*/
   }
 
   deleteFromCoursArray($event:any){
-    let index = this.coursArray.indexOf($event);
-    this.coursArray.splice(index, 1);
+/*    let index = this.coursArray.indexOf($event);
+    this.coursArray.splice(index, 1);*/
   }
 }
