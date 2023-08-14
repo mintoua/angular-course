@@ -1,20 +1,6 @@
 <div class="form-area">
   <h1>Post Form</h1>
   <br><br>
-  <input type="text" placeholder="Post title" >
-  <br><br>
-  <textarea cols="30" rows="10" placeholder="Post Details" ></textarea>
-  <br><br>
-  <input type="text" placeholder="Post Image Url" >
-  <br><br>
-  <input type="text" placeholder="Post Url" >
-  <br><br>
-  <input type="checkbox" > Add Background
-</div>
-<!--
-<div class="form-area">
-  <h1>Post Form</h1>
-  <br><br>
   <input type="text" placeholder="Post title" [(ngModel)]="postTitle">
   <br><br>
   <textarea cols="30" rows="10" placeholder="Post Details" [(ngModel)]="postDetails"></textarea>
@@ -26,13 +12,11 @@
   <input type="checkbox" [(ngModel)]="addBackground" > Add Background
 </div>
 
-
-&lt;!&ndash;[(ngModel)]="postTitle" => permet de faire le two way data-binding&ndash;&gt;
+<!--[(ngModel)]="postTitle" => permet de faire le two way data-binding-->
 <div class="preview-area">
-  <img [src]="imageUrl" alt=""> &lt;!&ndash;property binding&ndash;&gt;
+  <img [src]="imageUrl" alt=""> <!--property binding-->
   <h1> <span [class.add-background]="addBackground"> {{ postTitle }} </span></h1>
   <p> {{ postDetails }}</p>
   <a [href]="postUrl" target="_blank" [style.display]="postUrl ? 'block' : 'none' ">More details</a>
 </div>
 
--->
