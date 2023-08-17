@@ -1,11 +1,18 @@
 import { Injectable } from '@angular/core';
+import {Cours} from "./cours";
 
 @Injectable({
   providedIn: 'root'
 })
 export class CoursService {
 
-  coursArray: Array<any> = [
+  coursArray: Array<Cours> = [
+    new Cours(
+      'Introduction à VueJS',
+      'Découvrez le framework VueJS.',
+      'Débutant',
+      2,
+      'Mta'),
     {
       titre: 'Introduction à Angular',
       description: 'Découvrez le framework Angular pour créer des applications Web modernes.',
@@ -29,7 +36,6 @@ export class CoursService {
     },
   ]
   constructor() { }
-
 
   getAllCours(){
     return this.coursArray
