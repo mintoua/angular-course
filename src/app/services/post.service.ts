@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
+import {Post} from "./post";
 
+// @ts-ignore
 @Injectable({
   providedIn: 'root'
 })
 export class PostService {
 
-  postList: Array<any> = [
-    {id:1, postTitle: "Post 1"},
-    {id:2, postTitle: "Post 2"},
-    {id:4, postTitle: "Post 3"},
-    {id:5, postTitle: "Post 4"}
+  postList: Array<Post> = [
+    {id:1, titre: "Post 1", contenu: "contenu", comments: "message"},
+    {id:1, titre: "Post 1", contenu: "contenu", comments: "message"},
   ]
   constructor() { }
 
