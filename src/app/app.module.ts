@@ -7,6 +7,10 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PostComponent } from './post/post.component';
+import {FormsModule} from "@angular/forms";
+import { BlogComponent } from './blog/blog.component';
+import { HomeComponent } from './home/home.component';
+import {AppRoutingModule} from "./app-routing.module";
 
 @NgModule({
   declarations: [
@@ -15,10 +19,14 @@ import { PostComponent } from './post/post.component';
     HeaderComponent,
     FooterComponent,
     NavbarComponent,
-    PostComponent
+    PostComponent,
+    BlogComponent,
+    HomeComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
