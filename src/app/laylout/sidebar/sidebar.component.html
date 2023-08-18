@@ -1,0 +1,58 @@
+<div class="row flex-nowrap">
+  <div class="bg-dark col-auto col-md-4 col-lg-3 min-vh-100 d-flex flex-column justify-content-between">
+    <div class="bg-dark p-2">
+      <a class="d-flex text-decoration-none mt-1 align-items-center">
+        <span class="fs-4 d-none d-sm-inline">BackOffice</span>
+      </a>
+      <ul class="nav nav-pills flex-column mt-4">
+        <li class="nav-item py-2 py-sm-0">
+          <a href="#" class="nav-link text-white">
+            <i class="fs-5 fas fa-chart-line"> </i><span class="fs-4 ms-3 d-none d-sm-inline">Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item py-2 py-sm-0">
+          <a class="nav-link text-white" routerLink="/home" >
+            <i class="fs-5 fas fa-home"> </i><span  class="fs-4 ms-3 d-none d-sm-inline">Home</span>
+          </a>
+        </li>
+        <li class="nav-item py-2 py-sm-0">
+          <a [routerLink]="['/inscriptions']" class="nav-link text-white">
+            <i class="fs-5 fas fa-list-ul"> </i><span class="fs-4 ms-3 d-none d-sm-inline">Inscriptions</span>
+          </a>
+        </li>
+        <li class="nav-item py-2 py-sm-0">
+          <a [routerLink]="['/sessions']" class="nav-link text-white">
+            <i class="fs-5 fas fa-chalkboard"> </i><span class="fs-4 ms-3 d-none d-sm-inline">Sessions</span>
+          </a>
+        </li>
+        <li class="nav-item py-2 py-sm-0">
+          <a [routerLink]="['/formateurs']" class="nav-link text-white">
+            <i class="fs-5 fas fa-chalkboard-teacher"> </i><span class="fs-4 ms-3 d-none d-sm-inline">Formateurs</span>
+          </a>
+        </li>
+        <li class="nav-item py-2 py-sm-0">
+          <a [routerLink]="['/cours']" class="nav-link text-white">
+            <i class="fs-5 fas fa-book"> </i><span class="fs-4 ms-3 d-none d-sm-inline">Cours</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="dropdown open p-3">
+      <button class="btn border-none dropdown-toggle text-white" type="button" id="triggerId"
+              data-bs-target="" aria-expanded="false">
+        <i class="fa fa-user"> <span class="ms-2">Mintoua</span></i>
+
+      </button>
+      <div class="dropdown-menu" aria-labelledby="triggerId">
+        <button class="dropdown-item">Paramétre</button>
+        <button class="dropdown-item">Profil</button>
+      </div>
+    </div>
+  </div>
+  <!--content-->
+  <div class="p-3">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+
