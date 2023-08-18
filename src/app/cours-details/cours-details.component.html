@@ -1,4 +1,4 @@
-<div *ngIf="listCours?.length > 0; else templateSansDonnee">
+<div *ngIf="listCours.length > 0; else templateSansDonnee">
   <div *ngFor="let cours of listCours" class="container mt-4">
     <h2>{{ cours.titre }}</h2>
     <p>{{ cours.description }}</p>

@@ -1,5 +1,4 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {Cours} from "../services/cours";
 
 @Component({
   selector: 'app-cours-details',
@@ -7,7 +6,7 @@ import {Cours} from "../services/cours";
   styleUrls: ['./cours-details.component.css']
 })
 export class CoursDetailsComponent implements OnInit{
-  @Input() listCours: Array<Cours> | undefined;
+  @Input() listCours: any;
 
   cours: any = {
     titre: 'Introduction à VueJS',

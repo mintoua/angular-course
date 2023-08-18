@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {CoursService} from "./services/cours.service";
-import {Cours} from "./services/cours";
 
 @Component({
   selector: 'app-root',
@@ -10,7 +9,7 @@ import {Cours} from "./services/cours";
 export class AppComponent implements OnInit {
   title = "Liste des cours";
 
-  coursArray: Array<Cours> | undefined;
+  coursArray: Array<any> | undefined;
 
 
   //injection de la dépendance
