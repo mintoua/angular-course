@@ -7,13 +7,8 @@ import {Cours} from "./cours";
 export class CoursService {
 
   coursArray: Array<Cours> = [
-    new Cours(
-      'Introduction à VueJS',
-      'Découvrez le framework VueJS.',
-      'Débutant',
-      2,
-      'Mta'),
     {
+      id: 2,
       titre: 'Introduction à Angular',
       description: 'Découvrez le framework Angular pour créer des applications Web modernes.',
       difficulte: 'Débutant',
@@ -21,6 +16,7 @@ export class CoursService {
       formateur: 'Mta'
     },
     {
+      id: 3,
       titre: 'Introduction à Spring Boot',
       description: 'Découvrez le framework',
       difficulte: 'Débutant',
@@ -28,6 +24,7 @@ export class CoursService {
       formateur: 'Mta'
     },
     {
+      id: 4,
       titre: 'Introduction à React JS',
       description: 'Découvrez le framework React.',
       difficulte: 'Débutant',

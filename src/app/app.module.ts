@@ -11,6 +11,7 @@ import {FormsModule} from "@angular/forms";
 import { BlogComponent } from './blog/blog.component';
 import { HomeComponent } from './home/home.component';
 import {AppRoutingModule} from "./app-routing.module";
+import { CoursListComponent } from './cours-list/cours-list.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {AppRoutingModule} from "./app-routing.module";
     NavbarComponent,
     PostComponent,
     BlogComponent,
-    HomeComponent
+    HomeComponent,
+    CoursListComponent
   ],
   imports: [
     BrowserModule,
