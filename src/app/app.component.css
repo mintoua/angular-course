@@ -1,5 +1,6 @@
 .form-area, .preview-area
 {
+  width: 50%;
   text-align: center;
 }
 /*for class binding on html class*/
