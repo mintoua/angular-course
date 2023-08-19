@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {CoursService} from "./services/cours.service";
 
 @Component({
   selector: 'app-root',
