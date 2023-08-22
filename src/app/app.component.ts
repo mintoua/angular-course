@@ -13,10 +13,10 @@ export class AppComponent {
   postUrl: string | undefined;
   addBackground: boolean | undefined;*/
 
-  form: any;
+  monFormulaire: any;
 
   constructor() {
-    this.form = new FormGroup(
+    this.monFormulaire = new FormGroup(
       {
         email: new FormControl('',[
           Validators.required,
@@ -34,14 +34,14 @@ export class AppComponent {
   }
 
   get Username(){
-    return this.form.get('username');
+    return this.monFormulaire.get('username');
   }
 
   get Email(){
-    return this.form.get('email');
+    return this.monFormulaire.get('email');
   }
 
   get Message(){
-    return this.form.get('message');
+    return this.monFormulaire.get('message');
   }
 }

@@ -21,31 +21,38 @@
   <a [href]="postUrl" target="_blank" [style.display]="postUrl ? 'block' : 'none' ">More details</a>
 </div>
 -->
-<div class="form-area">
-<form [formGroup]="form" >
+<div class="container-fluid">
+<form [formGroup]="monFormulaire" >
   <div class="form-group">
     <label for="inputName" class="form-label">Name</label>
-    <input formControlName='username'  name="username"
-           type="text" class="form-control" id="inputName">
+
+    <input formControlName='username'  name="username" type="text" class="form-control" id="inputName">
+
     <div class="alert alert-danger" *ngIf="Username.touched && Username.invalid">
       <div *ngIf="Username.errors?.required"> Is required</div>
       <div *ngIf="Username.errors?.minLength"> Min char 5</div>
     </div>
+
+
   </div>
   <div class="form-group">
     <label for="inputEmail" class="form-label">Email address</label>
-    <input formControlName='email' name="email"  type="email"
-           class="form-control" id="inputEmail" >
+
+    <input formControlName='email'   type="email" class="form-control" id="inputEmail" >
+
     <div class="alert alert-danger" *ngIf="Email.touched && Email.invalid">
       <div *ngIf="Email.errors?.required"> Is required</div>
       <div *ngIf="Email.errors?.pattern"> Invalid </div>
     </div>
+
   </div>
   <div class="form-group mb-3">
     <label for="inputMessage" class="form-label">Message</label>
+
     <textarea formControlName='message' name="message"
               class="form-control" id="inputMessage" cols="30" rows="10"
               placeholder="Your message" ></textarea>
+
     <div class="alert alert-danger" *ngIf="Message.touched && Message.invalid">
       <div *ngIf="Message.errors?.required"> Is required</div>
     </div>
