@@ -37,4 +37,8 @@ export class CoursService {
   getAllCours(){
     return this.coursArray
   }
+  rechercherCoursParId(idRecherche: number): Cours | undefined {
+    const coursTrouve = this.coursArray.find(cours => cours.id === idRecherche);
+    return coursTrouve;
+  }
 }

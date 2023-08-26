@@ -7,14 +7,21 @@ import {ActivatedRoute} from "@angular/router";
   templateUrl: './cours-details.component.html',
   styleUrls: ['./cours-details.component.css']
 })
-export class CoursDetailsComponent implements OnInit{
-  constructor(private activatedRoute: ActivatedRoute) {
+export class CoursDetailsComponent //implements OnInit
+{
+  /*constructor(private activatedRoute: ActivatedRoute, private coursService: CoursService) {
   }
+
+  id: any;
+cours: any;
   ngOnInit(): void {
     // @ts-ignore
-    const id = +this.activatedRoute.snapshot.paramMap.get('id');
-/*    this.activatedRoute.paramMap.subscribe((result => this.paramUrl = result.get('id') ));*/
-    console.log("id: ", id)
+    this.id = +this.activatedRoute.snapshot.paramMap.get('id');
+this.cours=this.coursService.rechercherCoursParId(this.id);
+console.log(this.cours);
   }
+*/
+
+
 
 }
