@@ -58,5 +58,23 @@
       "telephone": "0216589632",
       "email": "axel@gmail.com"
     }
-  ]
+  ],
+  "session": [
+    {
+      "id": 1,
+      "dateDebut": "12-08-2023",
+      "dateFin": "12-01-2024",
+      "inscriptions": [],
+      "formations": [    {
+        "id": 4,
+        "titre": "Introduction à React JS",
+        "description": "Découvrez le framework React pour créer des applications Web modernes.",
+        "niveau": "DEBUTANT",
+        "formations": [],
+        "formateurs": []
+      }]
+    }
+  ],
+  "stage": [],
+  "forum": []
 }
