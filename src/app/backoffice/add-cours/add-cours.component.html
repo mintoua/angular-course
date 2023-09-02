@@ -1,0 +1,43 @@
+<div class="container-fluid align-items-center">
+    <div>
+        <form [formGroup]="addCoursForm" (ngSubmit)="addCours()" class="row g-3">
+            <div>
+                <h2 class="text-black-50">Ajout d'un cours</h2>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Titre du cours</label>
+                <input formControlName="titre" name="titre" type="text" class="form-control" required >
+                <div class="alert alert-danger" *ngIf="Titre.touched && Titre.invalid">
+                    <div *ngIf="Titre.errors?.required"> Champ obligatoire</div>
+                    <div *ngIf="Titre.errors?.minLength"> Minimum de caractères 3</div>
+                    <div *ngIf="Titre.errors?.maxLength"> Maximum de caractères 10</div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label">Niveau</label>
+                <select formControlName="niveau" name="niveau" class="form-select" required>
+                    <option selected value="DEBUTANT">Débutant</option>
+                    <option value="INTERMEDIAIRE">Intermediaire</option>
+                    <option value="EXPERT">Expert</option>
+                </select>
+                <div class="alert alert-danger" *ngIf="Niveau.touched && Niveau.invalid">
+                    <div *ngIf="Niveau.errors?.required"> Champ obligatoire</div>
+                </div>
+            </div>
+            <div class="col-12">
+                <label class="form-label">Description</label>
+                <textarea formControlName="description" name="description"
+                          type="text" class="form-control" rows="10" required>
+                </textarea>
+                <div class="alert alert-danger" *ngIf="Description.touched && Description.invalid">
+                    <div *ngIf="Description.errors?.required"> Champ obligatoire</div>
+                    <div *ngIf="Description.errors?.minLength"> Minimum de caractères 5</div>
+                </div>
+            </div>
+            <div class="col-12">
+                <button type="submit" [disabled]="!addCoursForm.valid" class="btn btn-outline-primary">Ajouter</button>
+            </div>
+        </form>
+    </div>
+</div>
+

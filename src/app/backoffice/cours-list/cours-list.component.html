@@ -1,1 +1,24 @@
-<p>cours-list works!</p>
+<div class="container-fluid mb-5 mt-3">
+    <a routerLink="/add-cours" class="btn btn-outline-success">Ajouter</a>
+</div>
+
+<div class="row" *ngIf="coursList.length > 0; else noData">
+        <div class="col" *ngFor="let cours of coursList">
+            <div class="card border-info mb-3" style="max-width: 18rem;">
+                <div class="card-header ">{{ cours.titre | uppercase }}</div>
+                <div class="card-body">
+                    <h5 class="card-title">Niveau: {{ cours.niveau }}</h5>
+                    <p class="card-text">{{ cours.description }}</p>
+                </div>
+                <div class="row justify-content-center mb-1" style="max-width: 18rem;">
+                    <a href="#" class="col col-auto "><span class="btn btn-outline-info" >Modifier</span></a>
+                    <button (click)="deleteCours(cours.id)" class="col col-auto"><span class="btn btn-outline-danger" >Supprimer</span></button>
+                </div>
+            </div>
+        </div>
+</div>
+<ng-template #noData>
+    <div class="container mt-4">
+        <p> No data ...</p>
+    </div>
+</ng-template>

@@ -1,0 +1,18 @@
+<section id="formations" class="py-5">
+  <div class="container">
+    <h2 class="mb-0">Nos formations</h2>
+    <h3 class="fw-light fs-5">Bootcamps et professional</h3>
+    <div class="row gy-4 gy-md-0 mt-4">
+      <div *ngFor="let cours of coursArray" class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card">
+          <img src="https://picsum.photos/300/150?random=1" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"> {{ cours.titre }}</h5>
+            <p class="card-text"> {{ cours.description }}</p>
+            <a class="btn btn-primary" >En savoir plus</a>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
