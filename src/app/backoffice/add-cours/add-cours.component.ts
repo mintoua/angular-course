@@ -48,17 +48,19 @@ export class AddCoursComponent implements OnInit{
   }
 
   addCours() {
-   // this.coursService.addCours(this.addCoursForm.value);
-    let formValue = this.addCoursForm.value;
-    let cours = {
-      id: this.coursService.coursArray.length + 1,
-      titre: formValue.titre,
-      description: formValue.description,
-      niveau: formValue.niveau,
-      formations: [],
-      formateurs: []
-    };
-    this.coursService.addCours(cours);
-    this.router.navigate(['/cours'])
+
+    if(this.addCoursForm.valid){
+      this.coursService.addCours(this.addCoursForm.value)
+        .subscribe({
+          next: (value: any) => {
+            //normalement afficher un flashy notif
+            alert('added successfully');
+            this.router.navigate(['/cours']);
+          },
+          error: (err: any) => {
+            console.error(err)
+          }
+        })
+    }
   }
 }

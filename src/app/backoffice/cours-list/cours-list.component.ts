@@ -8,7 +8,7 @@ import {CoursService} from "../../services/cours.service";
   styleUrls: ['./cours-list.component.css']
 })
 export class CoursListComponent implements OnInit {
-  coursList: Array<Cours> = [];
+  coursList: any;
 
   //injection de dépendance avec le constructor
   constructor(private coursService: CoursService) {}
@@ -18,10 +18,25 @@ export class CoursListComponent implements OnInit {
   }
 
   getCours(){
-    return this.coursService.getAllCours();
+   // return this.coursService.getAllCours();
+    return this.coursService.getAllCours()
+      .subscribe({
+        next: value => this.coursList = value,
+        error: err => {
+          console.log(err);
+          this.coursList = [];
+        }
+      })
   }
 
-  deleteCours(id: number) {
-    this.coursService.deleteCours(id);
+  deleteCours(id: number){
+    this.coursService.deleteCours(id)
+      .subscribe({
+        next: (res) => {
+          alert("Deleted successfully")
+          this.getCours();
+        },
+        error: console.log,
+      })
   }
 }
